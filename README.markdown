@@ -87,7 +87,12 @@ This method will return a string such as: `http://bmorton.s3.amazonaws.com/zelda
 
 ## Helper
 
-The helper wraps the above method calls with the core HTML helper.
+The helper wraps the above method calls with the core HTML helper.  To use this helper, you must define your keys with the Configure class, preferably in core.php, but anywhere before $this->render() is called should be fine.
+
+```
+Configure::write('AWS.S3.key', '0123456789');
+Configure::write('AWS.S3.secretKey', 'yourAmazonSecretKey');
+```
 
 
 
