@@ -81,7 +81,11 @@ $image = $this->S3Asset->getObjectUrl(array(
 ));
 ```
 
-This method will return a string such as: `http://bmorton.s3.amazonaws.com/zelda.png?AWSAccessKeyId=0123456789&Expires=0123456789&Signature=%2FJKasjkasASKJsakjASJas%3D`
+This method will return a string such as:
+
+```
+http://bmorton.s3.amazonaws.com/zelda.png?AWSAccessKeyId=0123456789&Expires=0123456789&Signature=%2FJKasjkasASKJsakjASJas%3D
+```
 
 
 
