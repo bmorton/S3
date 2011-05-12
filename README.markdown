@@ -23,9 +23,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+
+
 ## What's included
 
 This plugin has 2 parts: a component and a helper.  Both currently only support very basic S3 functionality, but the hope is that you will fork this, add more S3 calls, and send back a pull request :)
+
+
 
 ## The component
 
@@ -35,6 +39,8 @@ There are currently only 3 defined methods for the component. To use the compone
 var $components = array('S3.S3Asset' => array('key' => '01234567890', 'secretKey' => 'yourAmazonSecretKey'));
 ```
 
+
+
 ### Get bucket list
 
 This method will retrieve an array of buckets that you have access to on S3.  You can optionally pass it a regular expression as its one and only argument to filter the array returned.
@@ -42,6 +48,8 @@ This method will retrieve an array of buckets that you have access to on S3.  Yo
 ```
 $buckets = $this->S3Asset->getBucketList();
 ```
+
+
 
 ### Create object
 
@@ -56,6 +64,8 @@ $file = $this->S3Asset->createObject(array(
 ```
 
 The object returned is a CFResponse object: http://docs.amazonwebservices.com/AWSSDKforPHP/latest/index.html#i=CFResponse
+
+
 
 ### Get a (signed) URL
 
@@ -73,9 +83,13 @@ $image = $this->S3Asset->getObjectUrl(array(
 
 This method will return a string such as: `http://bmorton.s3.amazonaws.com/zelda.png?AWSAccessKeyId=0123456789&Expires=0123456789&Signature=%2FJKasjkasASKJsakjASJas%3D`
 
+
+
 ## Helper
 
 The helper wraps the above method calls with the core HTML helper.
+
+
 
 ### Image helper
 
@@ -85,6 +99,8 @@ Generate a well-formed HTML image tag using S3 as the image source.  Accepts an 
 // should be: image(bucketName, fileName, additionalAmazonOptionsArray, htmlAttributesArray)
 echo $this->S3Asset->image('bmorton', 'zelda.png', array('preauth' => '1 hour'));
 ```
+
+
 
 ### Link helper
 
