@@ -1,6 +1,6 @@
 # Amazon S3 Asset Wrapper for CakePHP
-## by Brian Morton (bmorton@sdreader.com)
-## Copyright (c) 2011 Brian Morton.  All rights reserved.
+by Brian Morton (bmorton@sdreader.com)
+Copyright (c) 2011 Brian Morton.  All rights reserved.
 
 ### License
 Permission is hereby granted, free of charge, to any person obtaining a
